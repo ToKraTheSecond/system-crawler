@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "system_crawler"
+version = "0.1.0"
+description = "sandbox project"
+authors = ["ToKra <kratas.tom@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytz = "^2024"
+
+[tool.poetry.dev-dependencies]
+ruff = "^0.1.14"
+mypy = "^1.8.0"
