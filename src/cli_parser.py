@@ -28,13 +28,13 @@ def parse_input():
 def parse_scan_command(subparsers) -> None:
     scan_parser = subparsers.add_parser(
         "scan",
-        help="Recursively find all files in provided dirs. Collected metadata are saved as JSON. Example calls `scan . -rp .`, `scan -h` for more info",
+        help="Recursively finds all files in provided dirs. Collected metadata are saved as JSON. Example calls `scan . -rp .`, `scan -h` for more info",
     )
     scan_parser.add_argument(
         "scan_dirs",
         nargs="+",
         type=Path,
-        help="Path to directories to scan. Provide atleast one dir path.",
+        help="Path to directories to scan. Provide at least one dir path.",
     )
     scan_parser.add_argument(
         "--result-path",
@@ -55,7 +55,7 @@ def parse_scan_command(subparsers) -> None:
         "-lo",
         choices=["console", "logfile"],
         default="console",
-        help="Log output",
+        help="Log output. Default is console. Logfile name - `logfile.log`",
     )
 
 
@@ -92,5 +92,5 @@ def parse_detect_command(subparsers) -> None:
         "-lo",
         choices=["console", "logfile"],
         default="console",
-        help="Log output. Logfile name - `logfile.log`",
+        help="Log output. Default is console. Logfile name - `logfile.log`",
     )
